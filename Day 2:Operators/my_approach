@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+   double meal;
+   int tax;
+   int tip;
+
+   cin>>meal;
+   cin>>tip;
+   cin>>tax;
+
+   cout<<round(meal+.01*tip*meal+.01*tax*meal);
+
+ }
