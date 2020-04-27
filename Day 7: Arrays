@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+   int N;
+
+   int i;
+   cin>>N;
+    int sample[N];
+   for (i=0;i<N;i++)
+   {
+
+       scanf("%d",&sample[i]);
+   }
+   for (i=N-1;i>=0;i--)
+   {
+       cout<<sample[i]<<" ";
+   }
+   return 0;
+}
