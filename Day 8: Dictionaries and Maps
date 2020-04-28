@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    map<string,long> Phonebook;
+    int N;
+    string name;
+    long number;
+    int i;
+    cin>>N;
+    for (i=0;i<N;i++)
+    {
+        cin>>name>>number;
+        Phonebook[name]=number;
+    }
+    while (cin>>name)
+    {
+
+        if (Phonebook.find(name)!=Phonebook.end())
+            {
+                cout<<Phonebook.find(name)->first<<"="<<Phonebook.find(name)->second<<endl;
+            }
+        else
+        {
+            cout<<"Not found"<<endl;
+        }
+    }
+    return 0;
+}
