@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int i,j;
+    int flag=0;
+    cin >> n;
+    vector<int> a(n);
+    for(int a_i = 0; a_i < n; a_i++)
+    {
+        cin >> a[a_i];
+    }
+    for (i=0;i<n;i++)
+    {
+        for (j=0;j<n-1;j++)
+        {
+            if (a[j]>a[j+1])
+            {
+                swap(a[j],a[j+1]);
+                flag++;
+            }
+        }
+    }
+    vector<int>::iterator first;
+    first=a.begin();
+    vector<int>::iterator last;
+    last=a.end()-1;
+    cout<<"Array is sorted in "<<flag<<" swaps."<<endl;
+    cout<<"First Element: "<<*first<<endl;
+    cout<<"Last Element: "<<*last<<endl;
+    return 0;
+}
