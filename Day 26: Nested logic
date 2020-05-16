@@ -1,0 +1,30 @@
+
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main()
+{
+    int de,dr,me,mr,ye,yr;
+
+    cin>>dr>>mr>>yr;
+    cin>>de>>me>>ye;
+
+    if (yr>ye)
+        cout<<10000;
+    else if (mr>me & yr==ye)
+        cout<<500*(mr-me);
+    else if (dr>de & mr==me & yr==ye)
+        cout<<15*(dr-de);
+    else if (dr<=de & mr<=me & yr<=ye | yr<=ye)
+        cout<<0;
+
+
+      return 0;
+}
