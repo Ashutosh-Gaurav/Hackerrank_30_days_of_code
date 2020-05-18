@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int N;
+    cin >> N;
+    vector<string> Mails(N);
+    vector<string> Names(N);
+    vector<string> Valid;
+
+    for(int i = 0; i < N; i++)
+    {
+        cin >> Names[i] >> Mails[i];
+    }
+
+    regex object("(.+)@gmail.com");
+
+    for(int i = 0; i < N; i++)
+    {
+        if(regex_match(Mails[i],object))
+            Valid.push_back(Names[i]);
+    }
+
+    sort(Valid.begin(),Valid.end());
+    for (int k=0;k<Valid.size();k++)
+        cout<<Valid[k]<<endl;
+    return 0;
+}
