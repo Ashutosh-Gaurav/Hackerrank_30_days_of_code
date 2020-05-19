@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int T;
+    cin>>T;
+    while (T-->0)
+    {
+        int N;
+        int k;
+        cin>>N>>k;
+        vector<int> vec;
+        vector<int> required;
+        for (int i=0;i<N;i++)
+        {
+            vec.push_back(i+1);
+        }
+        for (int j=0;j<N-1;j++)
+        {
+            for (int x=j+1;x<N;x++)
+            {
+                if ((vec[j] & vec[x])<k)
+                {
+                    required.push_back(vec[j]&vec[x]);
+
+                }
+            }
+        }
+        cout<<*max_element(required.begin(),required.end())<<endl;
+    }
+
+    return 0;
+}
