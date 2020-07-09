@@ -34,15 +34,14 @@ class Solution{
                return root;
            }
         }
-        int getHeight(Node *start)
-        {
 
-          if(start==NULL)
+		int getHeight(Node* root){
+           if(root==NULL)
           {
               return -1;
           }
-          int ld= getHeight(start->left);
-          int rd= getHeight(start->right);
+          int ld= getHeight(root->left);
+          int rd= getHeight(root->right);
           return max(ld,rd)+1;
 
         }
